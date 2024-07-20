@@ -1,0 +1,50 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.button_class{
+    color:hotpink;
+}
+#button_id{
+    color:hotpink;
+}
+.container{
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    align-items:center;
+    margin-top:40px;
+    width:400px;
+    height:200px;
+    margin-left:40px;
+}
+.bag{
+    height:34px;
+    width:94px;
+    border-radius:20px;
+    border:0;
+    background-color:#84D983;
+    font-weight:600;
+    margin-right:20px;
+    transition:0.2s ease;
+
+}
+.bag:hover{
+    cursor:pointer;
+    background-color:#4cb14a;
+}
+.wishlist{
+    width:145px;
+    height:37px;
+    text-align:center;
+    border-radius:8px;
+    padding:5px;
+    border:2px solid black;
+    transition:0.2s ease;
+}
+.wishlist:hover{
+    cursor:pointer;
+    background-color:aliceblue;
+}

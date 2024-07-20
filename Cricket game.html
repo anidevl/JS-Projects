@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cricket Game</title>
+    <style>
+        body{
+            text-align:center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bat Ball Stump Game</h1>
+    <button onclick="
+    // Making computer choose something
+    rand=Math.random()*3;
+    if(rand>0 && rand<=1){
+        compStatus='Bat';
+    }else if(rand>1 && rand<=2){
+        compStatus='Ball';
+    }else{
+        compStatus='Stump';
+    }
+    // Comparing user's choice and computer's choice in order to declare result
+    if(compStatus=='Bat'){
+        matchStatus='Draw';
+    }else if(compStatus=='Ball'){
+        matchStatus='Won';
+    }
+    else{
+        matchStatus='Lost';
+    }
+    document.querySelector('#result').innerText=`Match ${matchStatus} because computer chose ${compStatus}`;
+    // printing in console
+    console.log(`You ${matchStatus} because computer chose ${compStatus}`);
+    
+    
+    
+    
+    ">Bat</button>
+    <button onclick="
+    // Making computer choose something
+    rand=Math.random()*3;
+    if(rand>0 && rand<=1){
+        compStatus='Bat';
+    }else if(rand>1 && rand<=2){
+        compStatus='Ball';
+    }else{
+        compStatus='Stump';
+    }
+    // Comparing user's choice and computer's choice in order to declare result
+    if(compStatus=='Bat'){
+        matchStatus='Lost';
+    }else if(compStatus=='Ball'){
+        matchStatus='Draw';
+    }
+    else{
+        matchStatus='Won';
+    }
+    document.querySelector('#result').innerText=`Match ${matchStatus} because computer chose ${compStatus}`;
+    // printing in console
+    console.log(`You ${matchStatus} because computer chose ${compStatus}`);
+    
+    ">Ball</button>
+    <button onclick="
+    // Making computer choose something
+    rand=Math.random()*3;
+    if(rand>0 && rand<=1){
+        compStatus='Bat';
+    }else if(rand>1 && rand<=2){
+        compStatus='Ball';
+    }else{
+        compStatus='Stump';
+    }
+    // Comparing user's choice and computer's choice in order to declare result
+    if(compStatus=='Bat'){
+        matchStatus='Won';
+    }else if(compStatus=='Ball'){
+        matchStatus='Lost';
+    }
+    else{
+        matchStatus='Draw';
+    }
+    document.querySelector('#result').innerText=`Match ${matchStatus} because computer chose ${compStatus}`;
+    // printing in console
+    console.log(`You ${matchStatus} because computer chose ${compStatus}`);
+
+
+    
+    ">Stump</button>
+    <p id="result"></p>
+    <script>
+        let rand;
+        let compStatus='';
+        let matchStatus='';
+        document.querySelector("#result").innerText=status;
+    </script>
+</body>
+</html>
