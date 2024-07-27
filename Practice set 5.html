@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice set 5</title>
+</head>
+<body>
+    <script>
+        let tpr= 400;
+        const age=parseInt(prompt("Enter your age:"));
+        const gender=prompt("Enter your gender(1.press 'f' for female) (2.press 'm' for male) (3.press 'o' for other) :");
+        if(gender==='f' && age>8){
+            tpr=(tpr-((50/100)*tpr));
+            console.log(`Your Ticket price is Rs${tpr}  enjoy your ride Mam 😀`);
+        }
+        else if(age>=0 && age<=5){
+           tpr=0;
+           console.log(`Your Ticket price is free i.e Rs${tpr}  enjoy your ride kiddo 😜`);
+        }
+        else if(age>5 && age<=8){
+            tpr=tpr/2;
+            console.log(`Your Ticket price is Rs${tpr}  enjoy your ride kid 😊`);
+        }
+        else if(age>=65 && gender==='m'){
+            tpr=(tpr-((30/100)*tpr));
+            console.log(`Your Ticket price is Rs${tpr}  enjoy your ride Sir 😀`);
+        }
+        else if(age>=65 && gender==='o'){
+            tpr=(tpr-((30/100)*tpr));
+            console.log(`Your Ticket price is Rs${tpr}  enjoy your ride 😀`);
+        }
+        else{
+            console.log(`Your ticket price is Rs${tpr}`)
+        }
+    </script>
+</body>
+</html>
