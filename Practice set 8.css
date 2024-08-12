@@ -1,0 +1,16 @@
+body{
+    font-family:poppins;
+    text-align:center;
+}
+.js-even{
+    background-color:hotpink;
+    height:50px;
+    width:50px;
+    cursor:pointer;
+}
+.js-odd{
+    background-color:coral;
+    height:50px;
+    width:50px;
+    cursor:pointer;
+}

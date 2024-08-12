@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice set 8</title>
+    <link rel="stylesheet" href="Practice set 8.css">
+</head>
+<body>
+    <h1 id="greet-msg"></h1>
+    <button id="count-button" onclick="buttonCounter();"></button>
+
+
+
+
+    <script>
+        /*
+        
+        3. Create a Button which shows the number how many times it has been pressed.
+        • Also, it has different colors for when it has been pressed odd or even times.
+        • The click count should also survive browser refresh.
+        
+        */
+        let buttonCount= JSON.parse(localStorage.getItem('buttonCount')) || 0;
+        let button = document.querySelector('#count-button');
+        function buttonCounter(){
+            buttonCount+=1;
+            localStorage.setItem('buttonCount',JSON.stringify(buttonCount));
+            updateButton();
+        }
+        function updateButton(){
+            if(buttonCount %2 === 0 ){
+                button.classList.add('js-even');
+                button.classList.remove('js-odd');
+            }
+            else{
+                button.classList.add('js-odd');
+                button.classList.remove('js-even');
+            }
+            button.innerText= buttonCount;
+        }
+        updateButton();
+        
+
+
+        let personName="Aniket Kumar";
+        function greeting(personName ='Dear'){
+
+        // 1. Display good morning, afternoon and night based on current hour.
+        // 2. Add the name to the output too.
+        let myDate = new Date();
+        currentTime=myDate.getHours();
+        if(currentTime>=0 && currentTime<12 ){
+          document.querySelector("#greet-msg").innerText="Good Morning "+personName;
+        }
+        else if(currentTime>=12 && currentTime<=18){
+            document.querySelector("#greet-msg").innerText="Good afternoon "+personName;
+        }
+        else if(currentTime>18 && currentTime<=24){
+            document.querySelector("#greet-msg").innerText="Good Night "+personName;
+        }
+        else{
+            document.querySelector("#greet-msg").innerText="System couldn't fetch date";
+        }
+
+    }
+    greeting(personName);
+        
+        
+
+    </script>
+</body>
+</html>
