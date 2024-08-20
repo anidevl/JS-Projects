@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice set 9</title>
+</head>
+<body>
+    <script>
+     
+       /* 1. Create an array of numbers [5,6]. Add 4 at the beginning and 7 at the end of the array. */
+        let arr=[5,6];
+        console.log(arr);
+        arr.push(7);
+        arr.unshift(4);
+        console.log(arr);
+        /*2. Create a method to return an element at a particular position in the array.*/
+        function returnElement(array,pos){
+            return array[pos-1];
+        }
+        console.log(returnElement(arr,2));
+        /*3. Create an array copy using slice method.*/
+        let arrcpy= arr.slice(0,arr.length);
+        console.log(arrcpy);
+        /* 4. Create a while loop that exits after counting 5 prime numbers.*/
+        function isPrime(num){
+            if(num<=1){
+                return false;
+            }
+            for(let i=2;i<num;i++){
+                if(num%i===0){
+                   return false;
+                }
+            }
+            return true;
+        }
+        let prmcnt=0; //prime number counter variable
+        let i=2;
+        while(prmcnt<5){
+            if(isPrime(i)){
+                console.log(i);
+                prmcnt+=1;
+            }
+            i+=1;
+        }
+        /* 5. Modify the above loop to finish using break. */
+        /*
+        
+        while(true){
+            if(isPrime(i)){
+                console.log(i);
+                prmcnt+=1;
+                if(prmcnt>=5) break;
+            }
+            i+=1;
+        }
+
+        */
+        /* 6. Create a for loop that prints number 1 to 10 in reverse order.*/
+        for(let i=10;i>=1;i--){
+            console.log(i);
+        }
+        /* 7. Using continue only print positive numbers from the given array [1,-6,5,7,-98] */
+        let posarr =[1,-6,5,7,-98];
+        for(let i=0;i<posarr.length;i++){
+            if(posarr[i]<0){
+                continue;
+            }
+          console.log(posarr[i]);
+        }
+        /* 8. Using accumulator pattern concatenate all the strings in the given array ['KG', 'Coding', 'Javascript', 'Course', 'is', 'Best']*/
+        let acuarr=['KG', 'Coding', 'Javascript', 'Course', 'is', 'Best'];
+        let concacuarr='';
+        for(let i=0;i<acuarr.length;i++){
+           concacuarr+=`${acuarr[i]} `;
+        }
+        console.log(concacuarr);
+    </script>
+</body>
+</html>
